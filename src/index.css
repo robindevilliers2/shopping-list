@@ -1,13 +1,134 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&family=Reddit+Sans+Condensed:wght@200..900&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #eeeeee;
+  font-family: "Reddit Sans Condensed";
+  font-size: 23px;
+  font-weight: 400;
+  color: #eeeeee;
+}
+
+.App {
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  background: #222831;
+  padding: 0.5rem 0;
+  width: 100%;
+  font-family: "Poetsen One";
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.grocery-area {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  height: auto;
+}
+.grocery-area h2 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.grocery-list {
+  background: #2d4059;
+  min-height: 60vh;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.grocery-list ul {
+  padding: 10px;
+  list-style: none;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5rem;
+  justify-content: center;
+  align-content: start;
+}
+
+.grocery-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  background-color: #222831;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 50px;
+}
+
+.grocery-list li.packed span {
+  text-decoration: line-through;
+}
+
+.grocery-list li button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  padding: 0.8rem;
+  transform: translateY(2px);
+  float: right;
+}
+
+.add-item-form {
+  background: #2d4059;
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  padding: 2.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+button,
+select,
+input {
+  background-color: #eeeeee;
+  color: #ff5722;
+  font-family: inherit;
+  border: none;
+  border-radius: 10rem;
+  padding: 0.5rem 1.2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+  accent-color: #ff5722;
+  margin-right: 10px;
+}
+
+.footer {
+  background: #ff5722;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
 }
